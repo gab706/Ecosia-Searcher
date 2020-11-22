@@ -16,7 +16,6 @@ $(document).ready(
             setTimeout(function() {
                 $('.input[data-test-id="search-form-input"]').val(searchWords[Math.floor(Math.random() * searchWords.length)]);
                 $('.button[data-test-id="search-form-submit"]').click();
-                searches++
             }, 5000)
         } else {
             setTimeout(function() {
