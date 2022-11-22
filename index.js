@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ecosia Searcher
 // @namespace    https://www.ecosia.org/?c=en
-// @version      0.1
+// @version      0.5
 // @description  Search for searches with Ecosia
 // @author       Gabriel
 // @match        https://www.ecosia.org/*
@@ -14,8 +14,7 @@ $(document).ready(
     function() {
         if (url === '/') {
             setTimeout(function() {
-                $('.input[data-test-id="search-form-input"]').val(searchWords[Math.floor(Math.random() * searchWords.length)]);
-                $('.button[data-test-id="search-form-submit"]').click();
+                window.location.href = `https://www.ecosia.org/search?method=index&q=${searchWords[Math.floor(Math.random() * searchWords.length)]}`;
             }, 5000)
         } else {
             setTimeout(function() {
